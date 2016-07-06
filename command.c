@@ -6,7 +6,7 @@
 /*   By: jbester <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/23 09:51:32 by jbester           #+#    #+#             */
-/*   Updated: 2016/06/29 15:29:33 by jbester          ###   ########.fr       */
+/*   Updated: 2016/06/30 10:48:34 by jbester          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int		ft_changedir(char *line)
 	new = ft_strsplit(line, ' ');
 	if (ft_checkdir(new[1]) == 0)
 	{
-		//old_pwd_change(env);
 		chdir(new[1]);
 		return (0);
 	}
@@ -56,8 +55,7 @@ int	ft_checkdir(char *dir)
 		return (0);
 	else
 	{
-		ft_putstr("Minishell: ");
-		ft_putstr("invalid directory or file: ");
+		ft_putstr("Minishell: invalid directory or file: ");
 		ft_putstr(dir);
 		ft_putchar('\n');
 		return (-1);
