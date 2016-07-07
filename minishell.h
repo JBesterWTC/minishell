@@ -6,7 +6,7 @@
 /*   By: jbester <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/21 11:19:26 by jbester           #+#    #+#             */
-/*   Updated: 2016/07/05 08:08:45 by jbester          ###   ########.fr       */
+/*   Updated: 2016/07/07 14:34:10 by jbester          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,14 @@ int		ft_changedir(char *line);
 int		ft_checkdir(char *dir);
 int		ft_currentdir(void);
 int		ft_env(char **env);
-char	**old_pwd_change(char **env);
-char	**new_pwd_change(char **env);
+//char	**old_pwd_change(char **env);
+//char	**new_pwd_change(char **env);
+char	**ft_setenv(char *line, char **env);
+char	*ft_update_env(char **name);
+char	**ft_set_new_env(char **env, char *name, char *value);
+void	free_old_env(char **orig);
+char	**ft_cpy_env(char **env, int extra);
+int		ft_env_size(char **env);
+
 
 #endif
